@@ -35,9 +35,9 @@ mobileSearchIcon.addEventListener("click", toogleMobileSerch);
 
 //Funtions
 function changeTheme() {
-  theme.getAttribute("href") == "stylesWhite.css"
-    ? theme.setAttribute("href", "stylesDark.css")
-    : theme.setAttribute("href", "stylesWhite.css");
+  theme.getAttribute("href") == "./css/stylesWhite.css"
+    ? theme.setAttribute("href", "./css/stylesDark.css")
+    : theme.setAttribute("href", "./css/stylesWhite.css");
 }
 function logInState() {
   logOut.classList.toggle("hide");
