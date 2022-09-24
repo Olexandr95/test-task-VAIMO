@@ -210,7 +210,7 @@ body {
 }
 .header__navigation__footer .header__navigation__menu .header__navigation__menu__item {
   text-transform: capitalize;
-}main__content 
+}
 .header__navigation__footer .header__navigation__menu .header__navigation__menu__item:hover {
   text-decoration: underline;
 }
