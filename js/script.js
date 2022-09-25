@@ -135,4 +135,4 @@ function checkTheme() {
     darkSearchIcon.classList.remove("hide");
   }
 }
-window.onload = checkTheme();
+checkTheme();
