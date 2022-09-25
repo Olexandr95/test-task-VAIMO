@@ -35,9 +35,9 @@ mobileSearchIcon.addEventListener("click", toogleMobileSerch);
 
 //Funtions
 function changeTheme() {
-  theme.getAttribute("href") == "../css/stylesWhite.css"
-    ? theme.setAttribute("href", "../css/stylesDark.css")
-    : theme.setAttribute("href", "../css/stylesWhite.css");
+  theme.getAttribute("href") == "./css/stylesWhite.css"
+    ? theme.setAttribute("href", "./css/stylesDark.css")
+    : theme.setAttribute("href", "./css/stylesWhite.css");
 }
 function logInState() {
   logOut.classList.toggle("hide");
@@ -127,7 +127,7 @@ function checkTheme() {
   const whiteSearchIcon = document.querySelector("#white-them-icon");
   const darkSearchIcon = document.querySelector("#dark-them-icon");
 
-  if (theme.getAttribute("href") == "../css/stylesWhite.css") {
+  if (theme.getAttribute("href") == "./css/stylesWhite.css") {
     darkSearchIcon.classList.add("hide");
     whiteSearchIcon.classList.remove("hide");
   } else {
