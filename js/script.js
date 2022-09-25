@@ -128,11 +128,11 @@ function checkTheme() {
   const darkSearchIcon = document.querySelector("#dark-them-icon");
 
   if (theme.getAttribute("href") == "stylesWhite.css") {
-    darkSearchIcon.classList.add("hide");
-    whiteSearchIcon.classList.remove("hide");
+    darkSearchIcon.classList.toggle("hide");
+    whiteSearchIcon.classList.toggle("hide");
   } else {
     whiteSearchIcon.classList.toggle("hide");
-    darkSearchIcon.classList.remove("hide");
+    darkSearchIcon.classList.toggle("hide");
   }
 }
-checkTheme();
+window.onload = checkTheme();
