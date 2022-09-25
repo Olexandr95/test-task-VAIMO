@@ -250,6 +250,7 @@ body {
 }
 .footer__content .footer__navigtion__item .navigtion__item__text {
   margin-bottom: 6px;
+  font-size: 12px;
 }
 .footer__content .footer__navigtion__item .navigtion__item__text .footer__social__icons {
   display: flex;
