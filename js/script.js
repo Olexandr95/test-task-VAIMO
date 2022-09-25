@@ -35,21 +35,23 @@ mobileSearchIcon.addEventListener("click", toogleMobileSerch);
 
 //Funtions
 function changeTheme() {
-  theme.getAttribute("href") == "./css/stylesWhite.css"
-    ? theme.setAttribute("href", "./css/stylesDark.css")
-    : theme.setAttribute("href", "./css/stylesWhite.css");
+  theme.getAttribute("href") == "stylesWhite.css"
+    ? theme.setAttribute("href", "stylesDark.css")
+    : theme.setAttribute("href", "stylesWhite.css");
 }
 function logInState() {
   logOut.classList.toggle("hide");
   logIn.classList.toggle("hide");
   regBlock.style.marginLeft = "-60px";
   changeTheme();
+  checkTheme();
 }
 function logOutState() {
   logIn.classList.toggle("hide");
   logOut.classList.toggle("hide");
   regBlock.style.marginLeft = "0px";
   changeTheme();
+  checkTheme();
 }
 
 function dropAndDown() {
@@ -88,13 +90,11 @@ function openSubMenuLevel2() {
 
 function closeMenu() {
   goPrewPage();
-  shopMainMenu();
-  burgerMenu.classList.toggle("active");
+  showMainMenu();
+  burgerMenu.classList.remove("active");
 }
 
 function toogleMobileSerch() {
-  if (theme.getAttribute("href") == "stylesWhite.css") return;
-
   //constants
   const mobileHeaderBG = document.querySelector(".header_navigation__bg");
   const mobSearchIconWhite = document.querySelector("#search-icon-white");
@@ -122,3 +122,17 @@ function toogleMobileSerch() {
   mainContent.classList.toggle("margin-top");
   navMobHeader.classList.toggle("baseline");
 }
+
+function checkTheme() {
+  const whiteSearchIcon = document.querySelector("#white-them-icon");
+  const darkSearchIcon = document.querySelector("#dark-them-icon");
+
+  if (theme.getAttribute("href") == "stylesWhite.css") {
+    darkSearchIcon.classList.add("hide");
+    whiteSearchIcon.classList.remove("hide");
+  } else {
+    whiteSearchIcon.classList.toggle("hide");
+    darkSearchIcon.classList.remove("hide");
+  }
+}
+window.onload = checkTheme();
