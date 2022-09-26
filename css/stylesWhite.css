@@ -182,6 +182,7 @@ body {
 .main__content {
   display: flex;
   justify-content: center;
+   width: 1440px;
 }
 
 .main__content__arrivals {
